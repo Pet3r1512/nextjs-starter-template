@@ -1,161 +1,117 @@
+import Page from "@/components/Layout/Page";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-center gap-y-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
+    <Page className="flex items-center justify-center">
+      <section className="flex flex-col gap-y-5">
+        <p className="lg:text-6xl font-bold text-4xl md:text-5xl bg-gradient-to-br from-primary to-secondary inline-block text-transparent bg-clip-text">
+          <span className="dark:text-white text-black">This is</span> NextJS
+          Starter Template
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+        <p className="lg:text-2xl text-lg md:text-xl flex items-center gap-x-2.5">
+          🚀 Powered by{" "}
+          <Link href={"https://deviniter.vercel.app/"} target="_blank">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/logos/FullLogo.png"
+              alt="DevIniter Logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-10 w-auto"
             />
-          </a>
+          </Link>
+        </p>
+        <div className="flex items-center gap-x-2.5 mt-32">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-12 w-auto"
+          >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              strokeLinecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <g clip-path="url(#clip0)">
+                {" "}
+                <path
+                  d="M11.2141 0.00645944C11.1625 0.0111515 10.9982 0.0275738 10.8504 0.039304C7.44164 0.346635 4.24868 2.18593 2.22639 5.01291C1.10029 6.58476 0.380059 8.36775 0.107918 10.2563C0.0117302 10.9156 0 11.1103 0 12.0041C0 12.898 0.0117302 13.0927 0.107918 13.7519C0.760117 18.2587 3.96716 22.0452 8.31672 23.4481C9.0956 23.6991 9.91672 23.8704 10.8504 23.9736C11.2141 24.0135 12.7859 24.0135 13.1496 23.9736C14.7613 23.7953 16.1267 23.3965 17.4733 22.7091C17.6798 22.6035 17.7196 22.5754 17.6915 22.5519C17.6727 22.5378 16.793 21.3578 15.7372 19.9314L13.8182 17.339L11.4135 13.7801C10.0903 11.8235 9.00176 10.2235 8.99238 10.2235C8.98299 10.2211 8.97361 11.8024 8.96891 13.7331C8.96188 17.1138 8.95953 17.2499 8.9173 17.3296C8.85631 17.4446 8.80938 17.4915 8.71085 17.5431C8.63578 17.5807 8.57009 17.5877 8.21584 17.5877H7.80997L7.70205 17.5197C7.63167 17.4751 7.58006 17.4164 7.54487 17.3484L7.4956 17.2428L7.50029 12.539L7.50733 7.83285L7.58006 7.74136C7.6176 7.69209 7.69736 7.62875 7.75367 7.59825C7.84985 7.55133 7.88739 7.54664 8.29325 7.54664C8.77185 7.54664 8.85161 7.5654 8.97595 7.70147C9.01114 7.73901 10.3132 9.7003 11.871 12.0628C13.4287 14.4252 15.5589 17.651 16.6053 19.2346L18.5056 22.1132L18.6018 22.0499C19.4534 21.4962 20.3543 20.7079 21.0674 19.8868C22.5853 18.1437 23.5636 16.0182 23.8921 13.7519C23.9883 13.0927 24 12.898 24 12.0041C24 11.1103 23.9883 10.9156 23.8921 10.2563C23.2399 5.74957 20.0328 1.96306 15.6833 0.560125C14.9161 0.311445 14.0997 0.140184 13.1848 0.036958C12.9595 0.0134976 11.4088 -0.0123089 11.2141 0.00645944ZM16.1267 7.26511C16.2393 7.32142 16.3308 7.42933 16.3636 7.54194C16.3824 7.60294 16.3871 8.90734 16.3824 11.8469L16.3754 16.0651L15.6317 14.9249L14.8856 13.7848V10.7185C14.8856 8.73608 14.895 7.62171 14.9091 7.56775C14.9466 7.43637 15.0287 7.33315 15.1413 7.27215C15.2375 7.22288 15.2727 7.21819 15.6411 7.21819C15.9883 7.21819 16.0493 7.22288 16.1267 7.26511Z"
+                  fill="#000000"
+                ></path>{" "}
+              </g>{" "}
+              <defs>
+                {" "}
+                <clipPath id="clip0">
+                  {" "}
+                  <rect width="24" height="24" fill="white"></rect>{" "}
+                </clipPath>{" "}
+              </defs>{" "}
+            </g>
+          </svg>
+          <svg
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+            className="h-12 w-auto"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>file_type_tailwind</title>
+              <path
+                d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"
+                fill="#44a8b3"
+              ></path>
+            </g>
+          </svg>
+          <Image
+            src="/logos/lucide.jpg"
+            alt="Lucide Icon Logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="h-12 w-auto"
+          />
+          <Image
+            src="/logos/Shadcn.png"
+            alt="Shadcn Icon Logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="h-12 w-auto"
+          />
+          <svg
+            viewBox="0 0 32 32"
+            className="h-12 w-auto"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>file_type_light_prisma</title>
+              <path
+                d="M25.21,24.21,12.739,27.928a.525.525,0,0,1-.667-.606L16.528,5.811a.43.43,0,0,1,.809-.094l8.249,17.661A.6.6,0,0,1,25.21,24.21Zm2.139-.878L17.8,2.883h0A1.531,1.531,0,0,0,16.491,2a1.513,1.513,0,0,0-1.4.729L4.736,19.648a1.592,1.592,0,0,0,.018,1.7l5.064,7.909a1.628,1.628,0,0,0,1.83.678l14.7-4.383a1.6,1.6,0,0,0,1-2.218Z"
+                fill="#0c344b"
+              ></path>
+            </g>
+          </svg>
         </div>
-      </div>
-      <p className="text-4xl font-bold">NextJS Starter Template</p>
-
-      <div className="flex items-center gap-x-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="84"
-          height="84"
-          viewBox="0 0 48 48"
-        >
-          <linearGradient
-            id="NRNx2IPDe7PJlJvrxOKgWa_MWiBjkuHeMVq_gr1"
-            x1="24"
-            x2="24"
-            y1="43.734"
-            y2="4.266"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0" stop-color="#0a070a"></stop>
-            <stop offset=".465" stop-color="#2b2b2b"></stop>
-            <stop offset="1" stop-color="#4b4b4b"></stop>
-          </linearGradient>
-          <circle
-            cx="24"
-            cy="24"
-            r="19.734"
-            fill="url(#NRNx2IPDe7PJlJvrxOKgWa_MWiBjkuHeMVq_gr1)"
-          ></circle>
-          <rect
-            width="3.023"
-            height="15.996"
-            x="15.992"
-            y="16.027"
-            fill="#fff"
-          ></rect>
-          <linearGradient
-            id="NRNx2IPDe7PJlJvrxOKgWb_MWiBjkuHeMVq_gr2"
-            x1="30.512"
-            x2="30.512"
-            y1="33.021"
-            y2="18.431"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset=".377" stop-color="#fff" stop-opacity="0"></stop>
-            <stop offset=".666" stop-color="#fff" stop-opacity=".3"></stop>
-            <stop offset=".988" stop-color="#fff"></stop>
-          </linearGradient>
-          <rect
-            width="2.953"
-            height="14.59"
-            x="29.035"
-            y="15.957"
-            fill="url(#NRNx2IPDe7PJlJvrxOKgWb_MWiBjkuHeMVq_gr2)"
-          ></rect>
-          <linearGradient
-            id="NRNx2IPDe7PJlJvrxOKgWc_MWiBjkuHeMVq_gr3"
-            x1="22.102"
-            x2="36.661"
-            y1="21.443"
-            y2="40.529"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset=".296" stop-color="#fff"></stop>
-            <stop offset=".521" stop-color="#fff" stop-opacity=".5"></stop>
-            <stop offset=".838" stop-color="#fff" stop-opacity="0"></stop>
-          </linearGradient>
-          <polygon
-            fill="url(#NRNx2IPDe7PJlJvrxOKgWc_MWiBjkuHeMVq_gr3)"
-            points="36.781,38.094 34.168,39.09 15.992,16.027 19.508,16.027"
-          ></polygon>
-        </svg>
-        <svg
-          width="64"
-          height="64"
-          viewBox="0 0 314 314"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M283.336 0H30.6641C13.7288 0 0 13.7288 0 30.6641V283.336C0 300.271 13.7288 314 30.6641 314H283.336C300.271 314 314 300.271 314 283.336V30.6641C314 13.7288 300.271 0 283.336 0Z"
-            fill="#3178C6"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M194.373 249.866V280.567C199.364 283.126 205.266 285.044 212.081 286.323C218.896 287.603 226.078 288.242 233.629 288.242C240.988 288.242 247.978 287.539 254.601 286.131C261.223 284.724 267.031 282.406 272.022 279.175C277.012 275.946 280.964 271.724 283.875 266.511C286.786 261.298 288.242 254.855 288.242 247.179C288.242 241.614 287.411 236.738 285.747 232.548C284.083 228.359 281.684 224.633 278.548 221.371C275.413 218.109 271.654 215.183 267.27 212.592C262.887 210.002 257.944 207.555 252.441 205.253C248.41 203.59 244.795 201.975 241.595 200.408C238.396 198.84 235.677 197.242 233.437 195.611C231.197 193.98 229.47 192.253 228.254 190.43C227.039 188.607 226.43 186.544 226.43 184.241C226.43 182.131 226.974 180.228 228.062 178.533C229.15 176.838 230.686 175.383 232.669 174.168C234.653 172.953 237.084 172.009 239.963 171.337C242.843 170.666 246.042 170.33 249.562 170.33C252.121 170.33 254.825 170.522 257.672 170.906C260.519 171.289 263.383 171.881 266.263 172.68C269.142 173.48 271.941 174.488 274.661 175.703C277.38 176.918 279.892 178.325 282.195 179.924V151.238C277.524 149.447 272.421 148.12 266.887 147.256C261.352 146.393 255.001 145.961 247.834 145.961C240.539 145.961 233.629 146.745 227.102 148.312C220.576 149.879 214.833 152.325 209.873 155.651C204.914 158.977 200.996 163.214 198.116 168.363C195.237 173.512 193.797 179.668 193.797 186.832C193.797 195.978 196.436 203.782 201.716 210.242C206.994 216.702 215.008 222.17 225.759 226.648C229.982 228.375 233.917 230.069 237.564 231.733C241.211 233.396 244.363 235.123 247.018 236.914C249.674 238.704 251.769 240.655 253.305 242.766C254.841 244.876 255.609 247.275 255.609 249.962C255.609 251.945 255.129 253.783 254.169 255.478C253.209 257.173 251.753 258.644 249.802 259.891C247.85 261.139 245.419 262.114 242.507 262.817C239.595 263.521 236.189 263.873 232.285 263.873C225.63 263.873 219.04 262.706 212.513 260.371C205.986 258.037 199.939 254.535 194.373 249.866ZM142.76 174.222H182.145V149.027H72.3672V174.222H111.56V286.402H142.76V174.222Z"
-            fill="white"
-            className="size-16"
-          />
-        </svg>
-        <svg
-          width="64"
-          height="38.29"
-          viewBox="0 0 361 216"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M90.25 72C102.283 24 132.367 0 180.5 0C252.7 0 261.725 54 297.825 63C321.892 69 342.95 60 361 36C348.967 84 318.883 108 270.75 108C198.55 108 189.525 54 153.425 45C129.358 39 108.3 48 90.25 72ZM0 180C12.0333 132 42.1167 108 90.25 108C162.45 108 171.475 162 207.575 171C231.642 177 252.7 168 270.75 144C258.717 192 228.633 216 180.5 216C108.3 216 99.275 162 63.175 153C39.1083 147 18.05 156 0 180Z"
-            fill="#44A8B3"
-          />
-        </svg>
-        <Image
-          src="https://avatars.githubusercontent.com/u/139895814?s=48&v=4"
-          alt=""
-          width={1000}
-          height={1000}
-          className="size-16 rounded-lg"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="64"
-          height="64"
-          viewBox="0 0 48 48"
-        >
-          <path
-            fill="#4db6ac"
-            d="M44.284,36.035L27.687,1.429c-0.855-1.783-3.337-1.93-4.397-0.26L4.886,30.177	c-0.397,0.625-0.385,1.426,0.029,2.04l9.271,13.738c0.575,0.852,1.634,1.237,2.623,0.953l25.942-7.458	C44.208,39.031,44.939,37.402,44.284,36.035z M40.618,37.279L18.8,43.388c-0.505,0.142-0.98-0.305-0.87-0.818l7.735-36.097	c0.139-0.65,1.023-0.755,1.311-0.157l14.265,29.621C41.489,36.481,41.194,37.118,40.618,37.279z"
-          ></path>
-        </svg>
-      </div>
-    </main>
+      </section>
+    </Page>
   );
 }
